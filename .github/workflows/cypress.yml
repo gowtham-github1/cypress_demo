@@ -64,7 +64,6 @@ jobs:
             -u "gowtham.wc@gmail.com" \
             -p "Gowthn@5" \
             --project-id "2" \
-            --suite-id "3" \
             --case-matcher "default" \
             parse_junit \
             -f "test-results.xml" \
