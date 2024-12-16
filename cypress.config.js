@@ -1,6 +1,6 @@
-const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress';
 
-module.exports = defineConfig({
+export default defineConfig({
 
   reporter: 'cypress-testrail',
   reporterOptions: {
@@ -21,7 +21,7 @@ module.exports = defineConfig({
     MAILOSAUR_API_KEY: "jUEZs4HvEvtE6FXljjA9pVDllh6DGEEQ",
   },
   e2e: {
-    specPattern : "cypress/src/specs/login.spec.cy.js",
+    specPattern : "cypress/src/specs/**.cy.js",
     baseUrl: "https://portal.staging.evolus-dev.com/",
     setupNodeEvents(on, config) {
       // implement node event listeners here

@@ -32,7 +32,7 @@ describe('Login Test Scenario',() => {
         // cy.checkElementIsVisible(header.elements.userDropdownTab())
     })
 
-    it('TC-1 :Should fetch the first email message ID from YOPmail inbox', () => {
+    it('[C1] Should fetch the first email message ID from YOPmail inbox', () => {
         // Send request to YOPmail API to get messages for the temporary email
         cy.request({
             method: 'GET',  // You can change the method to 'POST' if needed
@@ -70,7 +70,7 @@ describe('Login Test Scenario',() => {
 
 
 
-    it('TC-2 :Should fetch OTP from YOPmail inbox', () => {
+    it('[C2] Should fetch OTP from YOPmail inbox', () => {
         // Make a request to YOPmail API to fetch the messages for the temporary email
         cy.request({
             method: 'GET', // or 'POST', depending on the actual request type

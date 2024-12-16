@@ -41,12 +41,35 @@ jobs:
         run: |
           npm install 
 
-      # Step 4: Run Cypress tests
+      # Step 4: Install Python
+      - name: Install Python
+        run: |
+          sudo apt install python3     
+
+      # Step 5: Run Cypress tests
       - name: Run Cypress Tests
         run: |
-          npx cypress run demo-run
+          npx cypress run --reporter "junit"
 
-      # Step 7: Upload Cypress Videos and Screenshots
+      # Step 6: Install test rail CLI
+      - name: Install testrail CLI 
+        run: |
+          pip install trcli 
+
+      # Step 7: upload results to testrail
+      - name: upload results to xml
+        run: |
+          trcli -y `
+            -h "https://gowtham23121991.testrail.io/" `
+            -u "gowtham.wc@gmail.com" `
+            -p "Gowthn@5" `
+            --project_id "2" `
+            --suite_id "3" `
+            parse_junit `
+            -f "test-results.xml" `
+            --title "Cypress automated tests - $(date +'%Y-%m-%d')"
+
+      # Step 8: Upload Cypress Videos and Screenshots
       - name: Upload Cypress Videos and Screenshots
         uses: actions/upload-artifact@v3
         with:
