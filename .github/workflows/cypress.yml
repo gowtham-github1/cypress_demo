@@ -63,7 +63,7 @@ jobs:
             -h "https://gowtham23121991.testrail.io/" \
             -u "gowtham.wc@gmail.com" \
             -p "Gowthn@5" \
-            --project_id "2" \
+            --project "2" \
             --suite_id "3" \
             parse_junit \
             -f "test-results.xml" \
