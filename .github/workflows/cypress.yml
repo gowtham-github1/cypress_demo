@@ -62,7 +62,7 @@ jobs:
           trcli -y \
             -h "https://gowtham23121991.testrail.io/" \
             -u "gowtham.wc@gmail.com" \
-            -p "C/9yvI6xbvq7ddNGstk1-nrKs/DKPzMOzpa5AER3q" \
+            -p "Gowthn@5" \
             --project "Cypress Automation" \
             --project-id "2" \
             parse_junit \
