@@ -64,7 +64,7 @@ jobs:
             -u "gowtham.wc@gmail.com" \
             -p "Gowthn@5" \
             --project "2" \
-            --suite_id "3" \
+            --suite "3" \
             parse_junit \
             -f "test-results.xml" \
             --title "Cypress automated tests - $(date +'%Y-%m-%d')"
