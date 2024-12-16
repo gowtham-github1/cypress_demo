@@ -63,8 +63,9 @@ jobs:
             -h "https://gowtham23121991.testrail.io/" \
             -u "gowtham.wc@gmail.com" \
             -p "Gowthn@5" \
-            --project "2" \
-            --suite "3" \
+            --project-id "2" \
+            --suite-id "3" \
+            --case-matcher "default" \
             parse_junit \
             -f "test-results.xml" \
             --title "Cypress automated tests - $(date +'%Y-%m-%d')"
