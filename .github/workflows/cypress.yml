@@ -59,14 +59,14 @@ jobs:
       # Step 7: upload results to testrail
       - name: upload results to xml
         run: |
-          trcli -y `
-            -h "https://gowtham23121991.testrail.io/" `
-            -u "gowtham.wc@gmail.com" `
-            -p "A3qkmPvtgbFep5TkNEdp-MNzftb52.3w28T0mM7C0" `
-            --project_id "2" `
-            --suite_id "3" `
-            parse_junit `
-            -f "test-results.xml" `
+          trcli -y \
+            -h "https://gowtham23121991.testrail.io/" \
+            -u "gowtham.wc@gmail.com" \
+            -p "Gowthn@5" \
+            --project_id "2" \
+            --suite_id "3" \
+            parse_junit \
+            -f "test-results.xml" \
             --title "Cypress automated tests - $(date +'%Y-%m-%d')"
 
       # Step 8: Upload Cypress Videos and Screenshots
